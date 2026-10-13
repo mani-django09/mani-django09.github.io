@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>How to redact a PDF properly (and why black boxes are not enough) | PDF &amp; Image Tool Guides</title>
+<meta name="description" content="Drawing a black rectangle over text does not remove it. Learn what real redaction is, how to test it, and how to remove sensitive data from a PDF.">
+<link rel="canonical" href="https://mani-django09.github.io/guides/how-to-redact-a-pdf-properly/">
+<link rel="stylesheet" href="/style.css">
+<meta property="og:type" content="article">
+<meta property="og:title" content="How to redact a PDF properly (and why black boxes are not enough) | PDF &amp; Image Tool Guides">
+<meta property="og:description" content="Drawing a black rectangle over text does not remove it. Learn what real redaction is, how to test it, and how to remove sensitive data from a PDF.">
+<meta property="og:url" content="https://mani-django09.github.io/guides/how-to-redact-a-pdf-properly/">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "How to redact a PDF properly (and why black boxes are not enough)", "description": "Drawing a black rectangle over text does not remove it. Learn what real redaction is, how to test it, and how to remove sensitive data from a PDF.", "datePublished": "2026-10-13", "dateModified": "2026-10-13", "mainEntityOfPage": "https://mani-django09.github.io/guides/how-to-redact-a-pdf-properly/", "author": {"@type": "Person", "name": "Manikant Yadav", "url": "https://github.com/mani-django09"}}</script>
+</head>
+<body>
+<header class="site"><div class="wrap">
+<a class="logo" href="/">PDF &amp; Image <span>Tool Guides</span></a>
+<nav><a href="/">Guides</a><a href="/about/">About</a><a href="https://smallpdf.us/">SmallPDF.us</a></nav>
+</div></header>
+<main><div class="wrap">
+<p class="meta"><a href="/">Guides</a> / How to redact a PDF properly (and why black boxes are not enough)</p>
+<h1>How to redact a PDF properly (and why black boxes are not enough)</h1>
+<p class="meta">By Manikant Yadav, maker of SmallPDF.us · Updated 2026-10-13</p>
+<p>Every year, documents are published with "blacked out" names that anyone can copy out in seconds. The reason: covering text with a black shape hides it visually but leaves the text in the file.</p>
+
+<h2>Why a black box is not redaction</h2>
+<p>In a PDF, the text and the box are separate layers. The box sits on top, the text is still underneath. Select-all and copy, or open the file in a text extractor, and the "hidden" words appear.</p>
+
+<h2>What real redaction does</h2>
+<p>Real redaction removes the underlying content. One reliable method is to turn the affected page into an image with the sensitive area permanently blacked out. Nothing is left underneath because the page is no longer text.</p>
+<p><a href="https://smallpdf.us/redact-pdf/">Redact PDF</a> works this way: you draw boxes over what must disappear, and the pages are rendered with those areas burned in. The trade-off is that the result is image-based, so the text on those pages can no longer be selected.</p>
+
+<h2>Steps</h2>
+<ol>
+<li>Open <a href="https://smallpdf.us/redact-pdf/">Redact PDF</a> and upload the document.</li>
+<li>Draw a box over every piece of sensitive information: names, account numbers, signatures, faces, addresses.</li>
+<li>Apply the redaction and download the new file.</li>
+<li><strong>Test it.</strong> Open the result, press select-all and copy into a text editor. The redacted parts must not show up. Also search for a redacted word.</li>
+</ol>
+
+<h2>Other places data can hide</h2>
+<ul>
+<li><strong>Metadata:</strong> author name, title and editing software.</li>
+<li><strong>Other pages and attachments:</strong> the same name may appear again on a later page.</li>
+<li><strong>Bookmarks and comments:</strong> they can contain the text you removed from the page.</li>
+</ul>
+
+<div class="note"><strong>Keep the original.</strong> Redaction is permanent. Save an untouched copy somewhere safe and only share the redacted version.</div>
+
+<p>To restrict who can open a file instead of removing content, use <a href="https://smallpdf.us/protect-pdf/">Protect PDF</a> to add a password. If you forget a password you set, <a href="https://smallpdf.us/unlock-pdf/">Unlock PDF</a> can remove it when you know the password.</p>
+<p><a class="cta" href="https://smallpdf.us/redact-pdf/">Try Redact PDF free</a></p>
+<h2>More guides</h2>
+<ul>
+<li><a href="/guides/how-to-compress-a-pdf/">How to compress a PDF without losing quality</a></li>
+<li><a href="/guides/how-to-merge-pdf-files/">How to merge several PDF files into one</a></li>
+<li><a href="/guides/how-to-convert-pdf-to-word/">How to convert a PDF to an editable Word document</a></li>
+<li><a href="/guides/how-to-convert-heic-to-jpg/">How to open and convert HEIC photos from an iPhone</a></li>
+<li><a href="/guides/how-to-reduce-image-file-size/">How to reduce the file size of an image (JPG, PNG, WebP)</a></li>
+</ul>
+</div></main>
+<footer><div class="wrap">
+<p>Written by the maker of <a href="https://smallpdf.us/">SmallPDF.us</a>, a free set of online PDF and image tools. Guides are for general information. Tool limits and features can change; see the <a href="https://smallpdf.us/pricing/">pricing page</a> for current details.</p>
+<p><a href="/">All guides</a> · <a href="/about/">About</a> · <a href="https://smallpdf.us/privacy/">Privacy</a> · <a href="https://github.com/mani-django09/smallpdf-us-app">Source code</a></p>
+</div></footer>
+</body></html>
