@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>How to save a video from a public Threads post (and make it usable) | PDF &amp; Image Tool Guides</title>
+<meta name="description" content="Copy the link, save the MP4, find it on iPhone, Android or a computer, check it is complete, and shrink it if it is too big to send. A practical walkthrough for public Threads posts.">
+<link rel="canonical" href="https://mani-django09.github.io/guides/how-to-save-a-threads-video/">
+<link rel="stylesheet" href="/style.css">
+<meta property="og:type" content="article">
+<meta property="og:title" content="How to save a video from a public Threads post (and make it usable)">
+<meta property="og:description" content="Copy the link, save the MP4, find it on iPhone, Android or a computer, check it is complete, and shrink it if it is too big to send.">
+<meta property="og:url" content="https://mani-django09.github.io/guides/how-to-save-a-threads-video/">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "How to save a video from a public Threads post (and make it usable)", "description": "Copy the link, save the MP4, find it on iPhone, Android or a computer, check it is complete, and shrink it if it is too big to send.", "datePublished": "2026-10-13", "dateModified": "2026-10-13", "mainEntityOfPage": "https://mani-django09.github.io/guides/how-to-save-a-threads-video/", "author": {"@type": "Person", "name": "Manikant Yadav", "url": "https://github.com/mani-django09"}}</script>
+</head>
+<body>
+<header class="site"><div class="wrap">
+<a class="logo" href="/">PDF &amp; Image <span>Tool Guides</span></a>
+<nav><a href="/">Guides</a><a href="/about/">About</a><a href="https://smallpdf.us/">SmallPDF.us</a></nav>
+</div></header>
+<main><div class="wrap">
+<p class="meta"><a href="/">Guides</a> / How to save a video from a public Threads post</p>
+<h1>How to save a video from a public Threads post (and make it usable)</h1>
+<p class="meta">By Manikant Yadav, maker of SmallPDF.us and Threads Downloader · Updated 2026-10-13</p>
+<p>Threads has no obvious &ldquo;save video&rdquo; button, so people end up screen-recording, which gives a blurry copy with notifications in the corner. A better way is to save the actual video file. This guide walks through it from start to finish, including the parts most tutorials skip: finding the file afterwards, checking it is complete, and making it small enough to send.</p>
+
+<h2>Before you start: what can and cannot be saved</h2>
+<ul>
+<li><strong>Public posts only.</strong> If you can open the post in a private or incognito browser window without logging in, it can be saved. If the account is private, it cannot, and it should not be.</li>
+<li><strong>The post must actually contain a video.</strong> A link preview to a YouTube video or a news article is not a video attached to the post.</li>
+<li><strong>It is not yours unless you made it.</strong> Keeping a copy for yourself is one thing. Reposting someone else&apos;s clip needs their permission. More on that at the end.</li>
+</ul>
+
+<h2>Step 1: copy the link to the post</h2>
+<p>In the Threads app, tap the share arrow under the post and choose <em>Copy link</em>. On a computer, copy the address from the post&apos;s page. Three kinds of links work:</p>
+<ul>
+<li>The full address, such as <code>threads.net/@name/post/ABC123</code></li>
+<li>The short <code>threads.net/t/ABC123</code> form</li>
+<li>The share links the mobile app creates</li>
+</ul>
+<p>Copy the link from the post itself, not from someone&apos;s profile page, which points to the account and not to one video.</p>
+
+<h2>Step 2: paste it into a downloader</h2>
+<p>Open a <a href="https://threadsdl.io/threads-video-downloader/">Threads video downloader</a> in your normal browser (Safari, Chrome, Samsung Internet), paste the link and press the button. You should see a preview of the clip with its file size before anything is saved. If the preview is the wrong video, you pasted the wrong link; go back and copy it again.</p>
+<p>If you are on a phone and the page opened inside another app, copy the address into a real browser first. Built-in app browsers often block downloads.</p>
+
+<h2>Step 3: find the file</h2>
+<table>
+<tr><th>Device</th><th>Where it goes</th><th>Getting it into your camera roll</th></tr>
+<tr><td>iPhone / iPad</td><td>Files app, in Downloads (iCloud Drive or On My iPhone)</td><td>Open the video in Files, tap Share, choose Save Video</td></tr>
+<tr><td>Android</td><td>Downloads folder, via the Files or My Files app</td><td>Usually appears in the Gallery on its own; otherwise move it from Files</td></tr>
+<tr><td>Windows / Mac</td><td>Your Downloads folder</td><td>Drag it wherever you keep videos</td></tr>
+</table>
+<p>On iPhone you can choose where Safari saves files under <em>Settings, Safari, Downloads</em>. Picking <em>On My iPhone</em> keeps big videos off your iCloud storage.</p>
+
+<h2>Step 4: check the file is complete</h2>
+<p>An interrupted download can leave a file that plays for a few seconds and stops. A thirty-second check avoids finding that out later:</p>
+<ol>
+<li>Play the first and last few seconds, with sound on.</li>
+<li>Compare its size with the size shown in the preview. A file far smaller than expected was cut short.</li>
+<li>On a computer, open the file&apos;s properties and make sure the duration looks right.</li>
+</ol>
+<p>If it is incomplete, download it again, ideally on Wi-Fi and with the screen on until it finishes.</p>
+
+<h2>Step 5: make it small enough to send</h2>
+<p>Most short clips are a few megabytes, but longer ones can be too large for email or a chat app. Your options, easiest first:</p>
+<ul>
+<li><strong>Send a link instead of the file.</strong> Upload it to a cloud drive and share the link. The video keeps its quality.</li>
+<li><strong>Send it as a file, not a video.</strong> Chat apps compress anything sent as a normal video. Sending it as a document skips that.</li>
+<li><strong>Trim it.</strong> The built-in editors in Photos (iPhone) and Gallery or Google Photos (Android) can cut it down to the part you need.</li>
+<li><strong>Re-encode it smaller.</strong> If you are comfortable with a command line, <code>ffmpeg</code> can shrink a clip a lot:</li>
+</ul>
+<p><code>ffmpeg -i clip.mp4 -vf scale=-2:480 -crf 28 clip-small.mp4</code></p>
+<p>That reduces the picture to 480 pixels high and compresses it harder. It is fine for sharing a quick reaction; do not use it for a copy you want to keep as an archive, because re-encoding always loses some quality.</p>
+
+<h2>When it will not save</h2>
+<table>
+<tr><th>What you see</th><th>Likely reason</th></tr>
+<tr><td>&ldquo;Not a valid link&rdquo;</td><td>You copied a profile, a screenshot or part of the address</td></tr>
+<tr><td>&ldquo;No downloadable media&rdquo;</td><td>The post is text only, or the media is a link preview to another site</td></tr>
+<tr><td>&ldquo;Private or restricted&rdquo;</td><td>The account is private or the post needs a login</td></tr>
+<tr><td>It worked before, not now</td><td>Threads changed something; wait and try again later</td></tr>
+</table>
+<p>The <a href="https://threadsdl.io/how-to-download-threads-videos/">step-by-step Threads download guide</a> on Threads Downloader goes deeper on each of these.</p>
+
+<h2>A note on permission and credit</h2>
+<p>Saving a video for yourself, to watch offline or to keep something useful, is the ordinary case. Anything beyond that, such as posting it on your own account, using it in a video or an advert, or putting it in a course, needs the creator&apos;s say-so. Ask in a reply or message; most people agree, and you get a better file as a bonus. Credit the creator, but do not treat credit as a substitute for permission.</p>
+<p><a class="cta" href="https://threadsdl.io/">Open Threads Downloader</a></p>
+<div class="note"><strong>Disclosure:</strong> I build Threads Downloader, so I use it in this guide. The steps above work with any tool that saves public Threads videos, and the file checks and sharing tips apply to any downloaded video.</div>
+
+<h2>More guides</h2>
+<ul>
+<li><a href="/guides/how-to-compress-a-pdf/">How to compress a PDF without losing quality</a></li>
+<li><a href="/guides/how-to-convert-heic-to-jpg/">How to open and convert HEIC photos from an iPhone</a></li>
+<li><a href="/guides/how-to-reduce-image-file-size/">How to reduce the file size of an image (JPG, PNG, WebP)</a></li>
+</ul>
+</div></main>
+<footer><div class="wrap">
+<p>Written by the maker of <a href="https://smallpdf.us/">SmallPDF.us</a> and <a href="https://threadsdl.io/">Threads Downloader</a>, free online tools. Guides are for general information. Tool limits and features can change.</p>
+<p><a href="/">All guides</a> · <a href="/about/">About</a> · <a href="https://smallpdf.us/privacy/">Privacy</a> · <a href="https://github.com/mani-django09/threads-video-downloader">Threads Downloader source</a></p>
+</div></footer>
+</body></html>
